@@ -16,8 +16,8 @@ $(function () {
   const showPosition = (position) => {
     $("#preloader_one").css("display", "inline-block");
     setTimeout(() => {
-      $("#latitude").val(position.coords.latitude);
-      $("#longitude").val(position.coords.longitude);
+      $("#sub_1_26").val(position.coords.latitude);
+      $("#sub_1_27").val(position.coords.longitude);
       btnLoca.textContent = "";
       $btnLocation.append('<i class="material-icons location_icon">check</i>');
     }, 2000);
