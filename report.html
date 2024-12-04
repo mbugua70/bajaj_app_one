@@ -6,6 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>BAJAJ</title>
 
+  <!-- animation libraly cdn -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
   <link
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
   rel="stylesheet"
@@ -201,31 +207,33 @@
 
         <div class="location_gps">
           <h4 class="">Load your location</h4>
-          <div class="placeholder" id="plaholder_id">
+          <div class="placeholder animate__animated" id="plaholder_id">
            <img src="./assets/placeholder.png" alt="placeholder" />
           </div>
-          <div class="checked" id="checked_id">
+          <div class="checked animate__animated animate__backInRight" id="checked_id">
            <img src="./assets/checked.png" alt="checked" />
           </div>
           <div class="location_gps_two">
             <input
-              class="active"
+              class="actives"
               type="number"
               name="longitude"
               id="sub_1_26"
               placeholder="Longitude"
+              value=""
               readonly
             />
             <input
-              class="active"
+              class="actives"
               type="number"
               name="latitude"
               id="sub_1_27"
+              value=""
               placeholder="Latitude"
               readonly
             />
           </div>
-          <button class="btn location_button" id="btn_location">
+          <button class="btn location_button center_button" id="btn_location">
             load
             <div class="preloader-wrapper small active" id="preloader_one">
               <div class="spinner-layer spinner-green-only">

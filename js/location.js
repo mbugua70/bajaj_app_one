@@ -1,3 +1,6 @@
+const placeholderElement = document.getElementById("plaholder_id");
+const checkedElement = document.getElementById("checked_id");
+
 $(function () {
   const $btnLocation = $("#btn_location");
   const btnLoca = document.querySelector("#btn_location");
@@ -16,13 +19,28 @@ $(function () {
   const showPosition = (position) => {
     $("#preloader_one").css("display", "inline-block");
     setTimeout(() => {
-      $("#sub_1_26").val(position.coords.latitude);
-      $("#sub_1_27").val(position.coords.longitude);
+      $("#sub_1_26").val(position.coords.longitude);
+      $("#sub_1_27").val(position.coords.latitude);
+      const longitude = document.getElementById("sub_1_26").value;
+      const latitude = document.getElementById("sub_1_27").value;
+
+      // changin location image
+      if (
+        position.coords.latitude == latitude &&
+        position.coords.longitude == longitude
+      ) {
+        placeholderElement.style.display = "none";
+        placeholderElement.classList.add("animate__backOutLeft");
+        checkedElement.style.display = "block";
+      } else {
+        placeholderElement.style.display = "block";
+        placeholderElement.classList.remove("animate__backOutLeft");
+        checkedElement.style.display = "none";
+      }
+
       btnLoca.textContent = "";
       $btnLocation.append('<i class="material-icons location_icon">check</i>');
     }, 2000);
-
-    // checkLocation();
   };
 
   const locationError = () => {

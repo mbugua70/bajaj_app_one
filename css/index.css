@@ -20,10 +20,22 @@ img{
 	display: none;
 }
 
-.active {
+.actives{
 	background-color: rgb(172, 109, 109, 0.25) !important;
 	border-width: 0 !important;
-	margin-top: 4;
+    border-radius: 4px !important;
+}
+
+.location_gps_two :nth-child(2){
+	margin-top: 6px;
+
+}
+
+.center_button{
+	text-align: center;
+	display: block;
+	margin-inline: auto;
+	margin-block: 6px;
 }
 
 body{
