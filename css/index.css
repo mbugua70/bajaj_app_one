@@ -31,6 +31,10 @@ img{
 
 }
 
+.location_gps{
+	overflow-y: hidden;
+}
+
 .center_button{
 	text-align: center;
 	display: block;
@@ -41,6 +45,7 @@ img{
 body{
 	width: 100%;
 	height: 100%;
+	overflow-x: hidden;
 }
 .main_body{
 	width: 100%;

@@ -30,11 +30,9 @@ $(function () {
         position.coords.longitude == longitude
       ) {
         placeholderElement.style.display = "none";
-        placeholderElement.classList.add("animate__backOutLeft");
         checkedElement.style.display = "block";
       } else {
         placeholderElement.style.display = "block";
-        placeholderElement.classList.remove("animate__backOutLeft");
         checkedElement.style.display = "none";
       }
 
