@@ -34,14 +34,13 @@ form.addEventListener(
       formData_one.append("project", project);
 
       setTimeout(() => {
-        fetch("https://iguru.co.ke/bajaj/scripts/BM.php", {
+        fetch("scripts/BM.php", {
           method: "POST",
           body: formData_one,
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
-            if (!data.error) {
+            if (data.response === "success") {
               workingNotifier(" Details Submitted Successfully!");
               shouldProceed = false;
             } else {
@@ -67,15 +66,10 @@ form.addEventListener(
   false
 );
 
-
-
 function validationForm(input_test) {
   var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
   return re.test(input_test);
 }
-
-
-
 
 const workingNotifier = (message) => {
   new swal({
@@ -83,7 +77,7 @@ const workingNotifier = (message) => {
     text: "",
     icon: "success",
   }).then((result) => {
-    if(result.isConfirmed){
+    if (result.isConfirmed) {
       location.reload();
     }
   });
